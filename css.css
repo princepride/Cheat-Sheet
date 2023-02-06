@@ -1,0 +1,32 @@
+.flex {
+    /*row default*/
+    display: flex; 
+    /*change display direction*/
+    flex-direction: column;
+    /* change layout style in the row 水平居中*/
+    /* 如果flex direction is column 全部居中方式相反*/
+    justify-content: flex-end, flex-start, center, space-between, space-around ;
+    /*change layout style in the column 垂直居中*/
+    align-items: flex-end, flex-start, center;
+    /* wrap when there is no more space放不下换行 */
+    flex-wrap: wrap;
+    /* align content only work when we have flex-wrap*/
+    align-content: flex-end, flex-start, center, space-between, space-around;
+    /* gap */
+    gap: 1em;
+}
+
+.item-3 {
+    /* 占的空间会尽可能变大直到填满整行或整列*/
+    flex-grow: 1;
+    /*it will shrink much faster than other items */
+    flex-shrink: 5;
+    /*the basis pixel the item have to fill, if 0 means 尽可能shrink */
+    flex-basis: 300px, 0;
+    /*flex have 3 parameters, means grow,shrink and basis, */
+    flex: 1;/* same as flex-grow: 1*/
+    /* just want item 3 vertical center*/
+    align-self: center;
+    /* reverse the order*/
+    order: -1;
+}
