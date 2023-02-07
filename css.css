@@ -30,3 +30,16 @@
     /* reverse the order*/
     order: -1;
 }
+/*use var to reference a custom property 
+(also known as a CSS variable) in your stylesheet.*/
+:root {
+    --main-color: blue;
+  }
+  
+  .element {
+    background-color: var(--main-color);
+  }
+
+  .div {
+    height:100vh; /* 表示高度设为100% */
+  }
