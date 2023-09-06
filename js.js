@@ -1,10 +1,10 @@
 //在js中this在function和箭头中是不一样的
-let a={b:1,c:2,d:this,e:()=>{return this}}
-console.log(a.d)//Window {window: Window, self: Window, document: document, name: '', location: Location, …}
-console.log(a.e())//Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+let a1={b:1,c:2,d:this,e:()=>{return this}}
+console.log(a1.d)//Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+console.log(a1.e())//Window {window: Window, self: Window, document: document, name: '', location: Location, …}
 
-let a={b:1,c:2,d:this,e:function(){return this}}
-console.log(a.e())//{b: 1, c: 2, d: Window, e: ƒ}
+let a2={b:1,c:2,d:this,e:function(){return this}}
+console.log(a2.e())//{b: 1, c: 2, d: Window, e: ƒ}
 
 //可以像这样插入子元素
 

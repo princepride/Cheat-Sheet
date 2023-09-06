@@ -1,4 +1,4 @@
-#给一个字符串s，替换其字串中字符最多k次使其字符都相同，求字串的最大长度
+# 给一个字符串s，替换其字串中字符最多k次使其字符都相同，求字串的最大长度
 def character_replacement(self, s: str, k: int) -> int:
         num = [0] * 26
         n = len(s)
