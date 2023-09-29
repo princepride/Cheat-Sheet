@@ -16,3 +16,19 @@ while not q.empty():
 #3
 #4
 #5
+
+#返回所有最小的元素
+import heapq
+def heap_pop_all(h):
+    min_elements = []
+    min_element = heapq.heappop(h)
+    min_elements.append(min_element)
+    while h and h[0] == min_element:
+        # 如果是，弹出并添加到结果列表中
+        min_elements.append(heapq.heappop(h))
+    return min_elements
+
+#针对某一属性的优先队列, 元组的第一项
+data = [[0,1,1],[1,2,1],[2,3,2],[0,3,2],[0,4,3],[3,4,3],[1,4,6]]
+h = [(item[2], item) for item in data]
+heapq.heapify(h)
