@@ -9,6 +9,10 @@ q.put(5)
 q.put(1)
 q.put(3)
 
+# q的大小
+q.qsize()
+# 5
+
 # get()方法移除并返回堆顶元素
 while not q.empty():
     next_item = q.get()
